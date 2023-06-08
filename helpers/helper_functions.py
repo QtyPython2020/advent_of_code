@@ -4,7 +4,21 @@
 
 """
 
-def read_single_line_to_str(path):
+def read_single_line_to_str(path: str) -> str:
+    """
+
+
+    Parameters
+    ----------
+    path : str
+        DESCRIPTION.
+
+    Returns
+    -------
+    content : str
+        DESCRIPTION.
+
+    """
     with open(path, "r") as file:
         content = file.readline()
     return content
