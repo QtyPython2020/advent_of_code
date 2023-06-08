@@ -21,7 +21,7 @@ def part1(commands: str) -> int:
     Returns
     -------
     final_floor : int
-        the final floor on which Santa lands.
+        The final floor on which Santa lands.
 
     """
     upward = commands.count("(")
@@ -43,7 +43,7 @@ def part2(commands: str) -> int:
     Returns
     -------
     int
-        the position of the direction that lets Santa enter the basement.
+        The position of the direction that lets Santa enter the basement.
 
     """
     floor = 0
