@@ -1,1 +1,10 @@
+# input files
 **/*.txt
+
+# cache files
+__pycache__/
+*.py[cod]
+
+# Spyder project settings
+.spyderproject
+.spyproject
