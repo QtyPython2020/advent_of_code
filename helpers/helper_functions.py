@@ -20,7 +20,7 @@ def read_single_line_to_str(path: str) -> str:
 
     """
     with open(path, "r") as file:
-        puzzle_input = file.readline()
+        puzzle_input = file.readline().rstrip("\n")
     return puzzle_input
 
 def read_multiple_lines_to_list_of_str(path: str):

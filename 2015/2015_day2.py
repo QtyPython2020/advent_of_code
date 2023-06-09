@@ -65,7 +65,7 @@ def part2(commands: str):
 
     Returns
     -------
-    total_length_needed : TYPE
+    total_length_needed : int
         Total length of ribbon needed.
 
     """
