@@ -7,7 +7,7 @@
 from itertools import permutations
 from functools import reduce
 from operator import mul
-from helpers.helper_functions import read_multiple_lines_to_list_of_str
+from helpers.helper_functions import read_multiple_lines_to_tuple_of_str
 
 def _split_to_ints(row: str) -> tuple[int]:
     """
@@ -79,6 +79,6 @@ def part2(commands: str):
     return total_length_needed
 
 if __name__ == "__main__":
-    instructions = read_multiple_lines_to_list_of_str("input_2015_2.txt")
+    instructions = read_multiple_lines_to_tuple_of_str("input_2015_2.txt")
     print(part1(instructions))
     print(part2(instructions))

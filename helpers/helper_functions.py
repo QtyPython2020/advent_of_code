@@ -23,7 +23,21 @@ def read_single_line_to_str(path: str) -> str:
         puzzle_input = file.readline().rstrip("\n")
     return puzzle_input
 
-def read_multiple_lines_to_list_of_str(path: str):
+def read_multiple_lines_to_tuple_of_str(path: str) -> tuple[str]:
+    """
+
+
+    Parameters
+    ----------
+    path : str
+        path to the input file.
+
+    Returns
+    -------
+    puzzle_input : tuple[str]
+        the input for the puzzle.
+
+    """
     with open(path, "r") as file:
         puzzle_input = tuple(line.rstrip("\n") for line in file.readlines())
     return puzzle_input
