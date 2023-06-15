@@ -5,7 +5,7 @@
 """
 from helpers.helper_functions import read_multiple_lines_to_tuple_of_str
 
-def part1(commands: tuple):
+def part1(commands: tuple[str]):
     """
     A nice string is one with all of the following properties:
 
@@ -18,7 +18,7 @@ def part1(commands: tuple):
 
     Parameters
     ----------
-    commands : tuple
+    commands : tuple[str]
         The puzzle input.
 
     Returns
@@ -48,7 +48,7 @@ def part1(commands: tuple):
         nice_strings += 1
     return nice_strings
 
-def part2(commands: tuple):
+def part2(commands: tuple[str]):
     """
     Now, a nice string is one with all of the following properties:
 
@@ -62,12 +62,12 @@ def part2(commands: tuple):
 
     Parameters
     ----------
-    commands : tuple
+    commands : tuple[str]
         The puzzle input.
 
     Returns
     -------
-    nice_strings : TYPE
+    nice_strings : int
         The number of nice strings.
 
     """

@@ -41,13 +41,13 @@ def _extract_instruction_and_coordinates(line: str):
     int_coords = [int(el) for el in coords]
     return task, *int_coords
 
-def part1(commands: str):
+def part1(commands: tuple[str]):
     """
     How many lights are lit?
 
     Parameters
     ----------
-    commands : str
+    commands : tuple[str]
         The instructions for the lights.
 
     Returns
@@ -74,13 +74,13 @@ def part1(commands: str):
     number_of_lights_lit = sum(cell for row in grid for cell in row)
     return number_of_lights_lit
 
-def part2(commands: str):
+def part2(commands: tuple[str]):
     """
     What is the total brightness of all lights combined after following Santa's instructions?
 
     Parameters
     ----------
-    commands : str
+    commands : tuple[str]
         The instructions for the lights.
 
     Returns

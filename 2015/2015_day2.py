@@ -26,7 +26,7 @@ def _split_to_ints(row: tuple) -> tuple[int]:
     """
     return tuple(int(num) for num in row.split("x"))
 
-def part1(commands: str):
+def part1(commands: tuple[str]):
     """
     How many total square feet of wrapping paper should they order?
 
@@ -34,7 +34,7 @@ def part1(commands: str):
 
     Parameters
     ----------
-    commands : tuple
+    commands : tuple[str]
         The provides sides.
 
     Returns
@@ -52,7 +52,7 @@ def part1(commands: str):
         total_wrapping_needed += wrapping_needed
     return total_wrapping_needed
 
-def part2(commands: tuple):
+def part2(commands: tuple[str]):
     """
     How many total feet of ribbon should they order?
 
@@ -60,7 +60,7 @@ def part2(commands: tuple):
 
     Parameters
     ----------
-    commands : tuple
+    commands : tuple[str]
         The provides sides.
 
     Returns
