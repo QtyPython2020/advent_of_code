@@ -9,7 +9,7 @@ from functools import reduce
 from operator import mul
 from helpers.helper_functions import read_multiple_lines_to_tuple_of_str
 
-def _split_to_ints(row: str) -> tuple[int]:
+def _split_to_ints(row: tuple) -> tuple[int]:
     """
 
 
@@ -34,7 +34,7 @@ def part1(commands: str):
 
     Parameters
     ----------
-    commands : str
+    commands : tuple
         The provides sides.
 
     Returns
@@ -52,7 +52,7 @@ def part1(commands: str):
         total_wrapping_needed += wrapping_needed
     return total_wrapping_needed
 
-def part2(commands: str):
+def part2(commands: tuple):
     """
     How many total feet of ribbon should they order?
 
@@ -60,7 +60,7 @@ def part2(commands: str):
 
     Parameters
     ----------
-    commands : str
+    commands : tuple
         The provides sides.
 
     Returns
