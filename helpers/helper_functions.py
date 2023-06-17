@@ -3,39 +3,23 @@
 @author: QtyPython2020
 
 """
+import json
 
 def read_single_line_to_str(path: str) -> str:
     """
-
-
-    Parameters
-    ----------
-    path : str
-        path to the input file.
-
-    Returns
-    -------
-    content : str
-        the input for the puzzle.
 
     """
     with open(path, "r") as file:
         puzzle_input = file.readline().rstrip("\n")
     return puzzle_input
 
+def read_single_line_to_json(path: str):
+    with open(path, "r") as file:
+        puzzle_input = json.loads(file.read())
+    return puzzle_input
+
 def read_multiple_lines_to_tuple_of_str(path: str) -> tuple[str]:
     """
-
-
-    Parameters
-    ----------
-    path : str
-        path to the input file.
-
-    Returns
-    -------
-    puzzle_input : tuple[str]
-        the input for the puzzle.
 
     """
     with open(path, "r") as file:
