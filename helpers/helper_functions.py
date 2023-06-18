@@ -4,6 +4,7 @@
 
 """
 import json
+from typing import Union
 
 def read_single_line_to_str(path: str) -> str:
     """
@@ -23,7 +24,7 @@ def read_single_line_to_tuple_of_str(path: str) -> tuple[str]:
         puzzle_input = tuple(file.readline().rstrip("\n").split(", "))
     return puzzle_input
 
-def read_json_to_object(path: str) -> (list,dict):
+def read_json_to_object(path: str) -> Union[list, dict]:
     """
     Read the input from the text file at the provided filepath. The file should
     contain one json object and the output will be a dictionary or list.
