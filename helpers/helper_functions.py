@@ -4,7 +4,14 @@
 
 """
 import json
-from typing import Union
+import re
+from typing import Union, Any
+
+def _parse_to_int(element: str) -> tuple[int]:
+    """
+    Extract all numeric element and convert these to integers
+    """
+    return tuple(int(el) for el in re.findall(r"(\d{1,})", element))
 
 def read_single_line_to_str(path: str) -> str:
     """
@@ -39,8 +46,23 @@ def read_multiple_lines_to_tuple_of_str(path: str) -> tuple[str]:
     contain multiple lines and the output will be a tuple of strings.
     """
     with open(path, mode="r", encoding="utf-8") as file:
-        puzzle_input = tuple(line.rstrip("\n") for line in file.readlines())
+        puzzle_input = tuple(line.rstrip("\n")
+                             for line in file.readlines())
     return puzzle_input
+
+def read_multiple_lines_to_tuple_of_parsed_element(path: str,
+                                                   parser: str) -> tuple[Any]:
+    """
+    Read the input from the text file at the provided filepath. The file should
+    contain multiple lines and the output will be a tuple of any type based on
+    the provided parse specification.
+    """
+    func = PARSERS.get(parser)
+    with open(path, mode="r", encoding="utf-8") as file:
+        puzzle_input = tuple(func(line.rstrip("\n")) for line in file.readlines())
+    return puzzle_input
+
+PARSERS = {"int": _parse_to_int}
 
 if __name__ == "__main__":
     pass
