@@ -3,7 +3,6 @@
 @author: QtyPython2020
 
 """
-
 import hashlib
 from helpers.helper_functions import read_single_line_to_str
 
