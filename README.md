@@ -4,12 +4,14 @@ A collection of all my Python scripts for solving the Advent of Code puzzles.
 Personal goals:
 1) Solve all puzzles from 2015 onwards;
 2) Solve all puzzles within 15 seconds;
+3) Test solutions on multiple puzzle inputs;
+4) Make all solutions easily explicable.
 
 Progress:
 |Year   |2015   |2016   |2017   |2018   |2019   |2020   |2021   |2022   |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|---:|
-|1   |**|**|||||**|
-|2   |**|**|||||**|
+|1   |**|**|**||||**|
+|2   |**|**|**||||**|
 |3   |**|**|
 |4   |**|*.|
 |5   |**|
