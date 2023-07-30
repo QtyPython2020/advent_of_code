@@ -13,6 +13,9 @@ def _parse_to_int(element: str) -> tuple[int]:
     """
     return tuple(int(el) for el in re.findall(r"(\d{1,})", element))
 
+def _parse_to_ints(element: str) -> tuple[tuple[int]]:
+    return tuple(int(el) for el in element)
+
 def _parse_to_str(element: str, sep: str = None) -> tuple[str]:
     """
     Extract all seperate elements from string and convert these to strings
@@ -28,6 +31,15 @@ def read_single_line_to_str(path: str) -> str:
         puzzle_input = file.readline().rstrip("\n")
     return puzzle_input
 
+def read_single_line_to_int(path: str) -> int:
+    """
+    Read the input from the text file at the provided filepath. The file should
+    contain one line and the output will be an integer.
+    """
+    with open(path, mode="r", encoding="utf-8") as file:
+        puzzle_input = int(file.readline().rstrip("\n"))
+    return puzzle_input
+
 def read_single_line_to_tuple_of_str(path: str) -> tuple[str]:
     """
     Read the input from the text file at the provided filepath. The file should
@@ -35,6 +47,11 @@ def read_single_line_to_tuple_of_str(path: str) -> tuple[str]:
     """
     with open(path, mode="r", encoding="utf-8") as file:
         puzzle_input = tuple(file.readline().rstrip("\n").split(", "))
+    return puzzle_input
+
+def read_single_line_to_list_of_int(path: str, sep: str = ",") -> list[int]:
+    with open(path, mode="r", encoding="utf-8") as file:
+        puzzle_input = list(map(int, file.readline().split(sep)))
     return puzzle_input
 
 def read_single_line_to_dict_of_int(path: str) -> dict[int]:
@@ -82,6 +99,7 @@ def read_multiple_lines_to_list_of_ints(path: str):
     return puzzle_input
 
 PARSERS = {"int": _parse_to_int,
+           "ints": _parse_to_ints,
            "str": _parse_to_str}
 
 if __name__ == "__main__":
