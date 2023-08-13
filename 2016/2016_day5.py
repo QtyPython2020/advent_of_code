@@ -46,5 +46,5 @@ def part2(door_id: str):
 
 if __name__ == "__main__":
     instructions = read_single_line_to_str("input_2016_5.txt")
-    # print(part1(instructions))
+    print(part1(instructions))
     print(part2(instructions))

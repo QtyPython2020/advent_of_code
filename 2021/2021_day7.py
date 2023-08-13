@@ -22,8 +22,8 @@ def part2(positions: np.ndarray):
     """
     consumption = np.inf
     for hor in np.arange(min(instructions)+1,max(instructions)):
-        func = np.vectorize(lambda x: sum(range(abs(x-hor)+1)))
-        fuel = sum(func(positions))
+        func = np.vectorize(lambda x,a: sum(range(abs(x-a)+1)))
+        fuel = sum(func(positions, hor))
         consumption = min([fuel, consumption])
     return consumption
 
