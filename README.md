@@ -17,7 +17,7 @@ Progress:
 |5  |**^|*.^||||**^|**^|**^|
 |6  |**^|**^||||**^|**^|**^|
 |7  ||..^|||||**^||
-|8  |   ^||||||**^||
+|8  |**^||||||**^||
 |9  |   ^||||||*.^||
 |10 |   ^||||||**^||
 |11 |   ^||||||**^||
@@ -37,6 +37,6 @@ Progress:
 |25 |
 
 Legend:
-* part solved
-. part not yet solved
-^ code uploaded
+* part solved;
+. part not yet solved;
+^ code uploaded.
